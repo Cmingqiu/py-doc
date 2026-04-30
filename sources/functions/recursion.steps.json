@@ -17,6 +17,6 @@
     { "line": 8, "action": "return", "callStack": ["factorial(5)", "factorial(4)"], "vars": { "result": { "value": "24", "type": "int", "changed": true } }, "note": "factorial(4) = 4 × 6 = 24，返回" },
     { "line": 8, "action": "return", "callStack": ["factorial(5)"], "vars": { "result": { "value": "120", "type": "int", "changed": true } }, "note": "factorial(5) = 5 × 24 = 120，返回" },
     { "line": 11, "action": "assign", "callStack": [], "vars": { "result": { "value": "120", "type": "int" } }, "note": "结果赋值给 result" },
-    { "line": 12, "action": "output", "output": "5! = 120", "note": "打印结果" }
+    { "line": 12, "action": "output", "vars": {}, "output": "5! = 120", "note": "打印结果" }
   ]
 }

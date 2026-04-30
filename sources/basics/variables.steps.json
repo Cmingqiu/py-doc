@@ -10,6 +10,6 @@
     { "line": 10, "action": "assign", "vars": { "age": { "value": "\"twenty-six\"", "type": "str", "changed": true } }, "note": "age 被重新赋值为字符串！类型从 int 变为 str" },
     { "line": 13, "action": "assign", "vars": { "x": { "value": "1", "type": "int" }, "y": { "value": "2", "type": "int" }, "z": { "value": "3", "type": "int" } }, "note": "多重赋值，一行创建三个变量" },
     { "line": 16, "action": "swap", "vars": { "x": { "value": "2", "type": "int", "changed": true }, "y": { "value": "1", "type": "int", "changed": true } }, "note": "Python 式交换，x 和 y 的值互换" },
-    { "line": 18, "action": "output", "output": "Alice twenty-six 1.68", "note": "打印变量值" }
+    { "line": 18, "action": "output", "vars": {}, "output": "Alice twenty-six 1.68", "note": "打印变量值" }
   ]
 }

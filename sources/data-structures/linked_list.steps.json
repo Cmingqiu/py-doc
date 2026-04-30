@@ -12,6 +12,6 @@
     { "line": 22, "action": "loop_iter", "loopVar": "current", "loopValue": "Node(10)", "vars": {}, "note": "遍历：current 指向 Node(10)" },
     { "line": 22, "action": "loop_iter", "loopVar": "current", "loopValue": "Node(20)", "vars": {}, "note": "遍历：current 指向 Node(20)" },
     { "line": 23, "action": "assign", "vars": { "ll": { "value": "LinkedList(10→20→30)", "type": "LinkedList", "changed": true } }, "note": "将 Node(30) 链接到末尾" },
-    { "line": 22, "action": "output", "output": "10 -> 20 -> 30 -> None", "note": "打印链表" }
+    { "line": 22, "action": "output", "vars": {}, "output": "10 -> 20 -> 30 -> None", "note": "打印链表" }
   ]
 }
