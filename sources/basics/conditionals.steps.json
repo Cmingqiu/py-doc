@@ -1,0 +1,14 @@
+{
+  "title": "条件判断",
+  "description": "if / elif / else 控制程序流程",
+  "steps": [
+    { "line": 4, "action": "assign", "vars": { "score": { "value": "85", "type": "int" } }, "note": "变量 score 赋值为 85" },
+    { "line": 6, "action": "condition", "branch": "false", "vars": {}, "note": "85 >= 90? 否，跳过这个分支" },
+    { "line": 8, "action": "condition", "branch": "true", "vars": { "grade": { "value": "\"B\"", "type": "str" } }, "note": "85 >= 80? 是！进入此分支，grade = \"B\"" },
+    { "line": 15, "action": "output", "output": "分数: 85, 等级: B", "note": "打印结果" },
+    { "line": 18, "action": "assign", "vars": { "age": { "value": "20", "type": "int" }, "has_id": { "value": "True", "type": "bool" } }, "note": "设置嵌套判断的条件变量" },
+    { "line": 21, "action": "condition", "branch": "true", "vars": {}, "note": "20 >= 18? 是，进入外层 if" },
+    { "line": 22, "action": "condition", "branch": "true", "vars": {}, "note": "has_id 为 True? 是，进入内层 if" },
+    { "line": 23, "action": "output", "output": "可以进入", "note": "满足所有条件，打印\"可以进入\"" }
+  ]
+}

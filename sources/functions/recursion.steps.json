@@ -1,0 +1,22 @@
+{
+  "title": "递归",
+  "description": "函数调用自身来解决问题的过程",
+  "steps": [
+    { "line": 5, "action": "call", "callStack": ["factorial(5)"], "vars": { "n": { "value": "5", "type": "int" } }, "note": "调用 factorial(5)" },
+    { "line": 7, "action": "condition", "branch": "false", "vars": {}, "note": "5 <= 1? 否，进入递归" },
+    { "line": 8, "action": "call", "callStack": ["factorial(5)", "factorial(4)"], "vars": { "n": { "value": "4", "type": "int" } }, "note": "需要 factorial(4)，递归调用" },
+    { "line": 7, "action": "condition", "branch": "false", "vars": {}, "note": "4 <= 1? 否" },
+    { "line": 8, "action": "call", "callStack": ["factorial(5)", "factorial(4)", "factorial(3)"], "vars": { "n": { "value": "3", "type": "int" } }, "note": "需要 factorial(3)" },
+    { "line": 7, "action": "condition", "branch": "false", "vars": {}, "note": "3 <= 1? 否" },
+    { "line": 8, "action": "call", "callStack": ["factorial(5)", "factorial(4)", "factorial(3)", "factorial(2)"], "vars": { "n": { "value": "2", "type": "int" } }, "note": "需要 factorial(2)" },
+    { "line": 7, "action": "condition", "branch": "false", "vars": {}, "note": "2 <= 1? 否" },
+    { "line": 8, "action": "call", "callStack": ["factorial(5)", "factorial(4)", "factorial(3)", "factorial(2)", "factorial(1)"], "vars": { "n": { "value": "1", "type": "int" } }, "note": "需要 factorial(1)" },
+    { "line": 7, "action": "condition", "branch": "true", "vars": {}, "note": "1 <= 1? 是！到达基准情况，返回 1" },
+    { "line": 8, "action": "return", "callStack": ["factorial(5)", "factorial(4)", "factorial(3)", "factorial(2)"], "vars": { "result": { "value": "2", "type": "int" } }, "note": "factorial(2) = 2 × 1 = 2，返回" },
+    { "line": 8, "action": "return", "callStack": ["factorial(5)", "factorial(4)", "factorial(3)"], "vars": { "result": { "value": "6", "type": "int", "changed": true } }, "note": "factorial(3) = 3 × 2 = 6，返回" },
+    { "line": 8, "action": "return", "callStack": ["factorial(5)", "factorial(4)"], "vars": { "result": { "value": "24", "type": "int", "changed": true } }, "note": "factorial(4) = 4 × 6 = 24，返回" },
+    { "line": 8, "action": "return", "callStack": ["factorial(5)"], "vars": { "result": { "value": "120", "type": "int", "changed": true } }, "note": "factorial(5) = 5 × 24 = 120，返回" },
+    { "line": 11, "action": "assign", "callStack": [], "vars": { "result": { "value": "120", "type": "int" } }, "note": "结果赋值给 result" },
+    { "line": 12, "action": "output", "output": "5! = 120", "note": "打印结果" }
+  ]
+}

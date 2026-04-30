@@ -1,0 +1,17 @@
+{
+  "title": "链表",
+  "description": "用类实现链表数据结构",
+  "steps": [
+    { "line": 17, "action": "assign", "vars": { "ll": { "value": "LinkedList(head=None)", "type": "LinkedList" } }, "note": "创建空链表" },
+    { "line": 18, "action": "call", "callStack": ["ll.append(10)"], "vars": {}, "note": "调用 append(10)" },
+    { "line": 19, "action": "assign", "vars": { "ll": { "value": "LinkedList(head=10)", "type": "LinkedList", "changed": true } }, "note": "链表为空，新节点直接作为 head" },
+    { "line": 20, "action": "call", "callStack": ["ll.append(20)"], "vars": {}, "note": "调用 append(20)" },
+    { "line": 22, "action": "loop_iter", "loopVar": "current", "loopValue": "Node(10)", "vars": {}, "note": "遍历找到末尾：current 指向 Node(10)" },
+    { "line": 23, "action": "assign", "vars": { "ll": { "value": "LinkedList(10→20)", "type": "LinkedList", "changed": true } }, "note": "将新节点链接到末尾" },
+    { "line": 21, "action": "call", "callStack": ["ll.append(30)"], "vars": {}, "note": "调用 append(30)" },
+    { "line": 22, "action": "loop_iter", "loopVar": "current", "loopValue": "Node(10)", "vars": {}, "note": "遍历：current 指向 Node(10)" },
+    { "line": 22, "action": "loop_iter", "loopVar": "current", "loopValue": "Node(20)", "vars": {}, "note": "遍历：current 指向 Node(20)" },
+    { "line": 23, "action": "assign", "vars": { "ll": { "value": "LinkedList(10→20→30)", "type": "LinkedList", "changed": true } }, "note": "将 Node(30) 链接到末尾" },
+    { "line": 22, "action": "output", "output": "10 -> 20 -> 30 -> None", "note": "打印链表" }
+  ]
+}
