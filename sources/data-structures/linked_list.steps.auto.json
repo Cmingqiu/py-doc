@@ -1,0 +1,676 @@
+{
+  "title": "链表",
+  "description": "用类实现简单的链表数据结构",
+  "steps": [
+    {
+      "line": 4,
+      "action": "call",
+      "vars": {},
+      "note": "调用 Node()",
+      "callStack": [
+        "Node()"
+      ]
+    },
+    {
+      "line": 5,
+      "action": "return",
+      "vars": {},
+      "note": "Node 返回 None",
+      "callStack": [
+        "Node()"
+      ]
+    },
+    {
+      "line": 9,
+      "action": "call",
+      "vars": {},
+      "note": "调用 LinkedList()",
+      "callStack": [
+        "LinkedList()"
+      ]
+    },
+    {
+      "line": 23,
+      "action": "return",
+      "vars": {},
+      "note": "LinkedList 返回 None",
+      "callStack": [
+        "LinkedList()"
+      ]
+    },
+    {
+      "line": 31,
+      "action": "assign",
+      "vars": {
+        "ll": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList"
+        }
+      },
+      "note": "创建LinkedList变量 ll",
+      "callStack": []
+    },
+    {
+      "line": 10,
+      "action": "call",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList"
+        }
+      },
+      "note": "调用 __init__(<LinkedList object at 0x0000000001B682F0>)",
+      "callStack": [
+        "__init__(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    },
+    {
+      "line": 11,
+      "action": "assign",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList"
+        }
+      },
+      "note": "创建变量 self.head",
+      "callStack": [
+        "__init__(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    },
+    {
+      "line": 11,
+      "action": "return",
+      "vars": {},
+      "note": "__init__ 返回 None",
+      "callStack": [
+        "__init__(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    },
+    {
+      "line": 13,
+      "action": "call",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList"
+        },
+        "value": {
+          "value": "10",
+          "type": "int"
+        }
+      },
+      "note": "调用 append(<LinkedList object at 0x0000000001B682F0>, 10)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 10)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "assign",
+      "vars": {
+        "new_node": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建Node变量 new_node",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 10)"
+      ]
+    },
+    {
+      "line": 5,
+      "action": "call",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node",
+          "changed": true
+        },
+        "value": {
+          "value": "10",
+          "type": "int"
+        }
+      },
+      "note": "调用 __init__(<Node object at 0x0000000001B69400>, 10)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 10)",
+        "__init__(<Node object at 0x0000000001B69400>, 10)"
+      ]
+    },
+    {
+      "line": 6,
+      "action": "assign",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建变量 self.value",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 10)",
+        "__init__(<Node object at 0x0000000001B69400>, 10)"
+      ]
+    },
+    {
+      "line": 7,
+      "action": "assign",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建变量 self.next",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 10)",
+        "__init__(<Node object at 0x0000000001B69400>, 10)"
+      ]
+    },
+    {
+      "line": 7,
+      "action": "return",
+      "vars": {},
+      "note": "__init__ 返回 None",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 10)",
+        "__init__(<Node object at 0x0000000001B69400>, 10)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList",
+          "changed": true
+        }
+      },
+      "note": "self.head is None? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "assign",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList"
+        }
+      },
+      "note": "创建变量 self.head",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 10)"
+      ]
+    },
+    {
+      "line": 17,
+      "action": "return",
+      "vars": {},
+      "note": "append 返回 None",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 10)"
+      ]
+    },
+    {
+      "line": 13,
+      "action": "call",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList"
+        },
+        "value": {
+          "value": "20",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "调用 append(<LinkedList object at 0x0000000001B682F0>, 20)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "assign",
+      "vars": {
+        "new_node": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "new_node 被重新赋值为 Node(...)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)"
+      ]
+    },
+    {
+      "line": 5,
+      "action": "call",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node",
+          "changed": true
+        },
+        "value": {
+          "value": "20",
+          "type": "int"
+        }
+      },
+      "note": "调用 __init__(<Node object at 0x0000000001A97D90>, 20)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)",
+        "__init__(<Node object at 0x0000000001A97D90>, 20)"
+      ]
+    },
+    {
+      "line": 6,
+      "action": "assign",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建变量 self.value",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)",
+        "__init__(<Node object at 0x0000000001A97D90>, 20)"
+      ]
+    },
+    {
+      "line": 7,
+      "action": "assign",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建变量 self.next",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)",
+        "__init__(<Node object at 0x0000000001A97D90>, 20)"
+      ]
+    },
+    {
+      "line": 7,
+      "action": "return",
+      "vars": {},
+      "note": "__init__ 返回 None",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)",
+        "__init__(<Node object at 0x0000000001A97D90>, 20)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList",
+          "changed": true
+        }
+      },
+      "note": "self.head is None? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 18,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建Node变量 current",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "condition",
+      "vars": {},
+      "note": "current.next is not None? 否，退出循环",
+      "branch": "false"
+    },
+    {
+      "line": 21,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建变量 current.next",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)"
+      ]
+    },
+    {
+      "line": 21,
+      "action": "return",
+      "vars": {},
+      "note": "append 返回 None",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 20)"
+      ]
+    },
+    {
+      "line": 13,
+      "action": "call",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList"
+        },
+        "value": {
+          "value": "30",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "调用 append(<LinkedList object at 0x0000000001B682F0>, 30)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "assign",
+      "vars": {
+        "new_node": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "new_node 被重新赋值为 Node(...)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)"
+      ]
+    },
+    {
+      "line": 5,
+      "action": "call",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node",
+          "changed": true
+        },
+        "value": {
+          "value": "30",
+          "type": "int"
+        }
+      },
+      "note": "调用 __init__(<Node object at 0x0000000001A97ED0>, 30)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)",
+        "__init__(<Node object at 0x0000000001A97ED0>, 30)"
+      ]
+    },
+    {
+      "line": 6,
+      "action": "assign",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建变量 self.value",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)",
+        "__init__(<Node object at 0x0000000001A97ED0>, 30)"
+      ]
+    },
+    {
+      "line": 7,
+      "action": "assign",
+      "vars": {
+        "self": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建变量 self.next",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)",
+        "__init__(<Node object at 0x0000000001A97ED0>, 30)"
+      ]
+    },
+    {
+      "line": 7,
+      "action": "return",
+      "vars": {},
+      "note": "__init__ 返回 None",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)",
+        "__init__(<Node object at 0x0000000001A97ED0>, 30)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList",
+          "changed": true
+        }
+      },
+      "note": "self.head is None? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 18,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "current 被重新赋值为 Node(...)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "condition",
+      "vars": {},
+      "note": "current.next is not None? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 20,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "current 被重新赋值为 Node(...)",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "condition",
+      "vars": {},
+      "note": "current.next is not None? 否，退出循环",
+      "branch": "false"
+    },
+    {
+      "line": 21,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "创建变量 current.next",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)"
+      ]
+    },
+    {
+      "line": 21,
+      "action": "return",
+      "vars": {},
+      "note": "append 返回 None",
+      "callStack": [
+        "append(<LinkedList object at 0x0000000001B682F0>, 30)"
+      ]
+    },
+    {
+      "line": 23,
+      "action": "call",
+      "vars": {
+        "self": {
+          "value": "LinkedList(...)",
+          "type": "LinkedList"
+        }
+      },
+      "note": "调用 display(<LinkedList object at 0x0000000001B682F0>)",
+      "callStack": [
+        "display(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    },
+    {
+      "line": 24,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "current 被重新赋值为 Node(...)",
+      "callStack": [
+        "display(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "current is not None? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 26,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"10\"",
+      "output": "10"
+    },
+    {
+      "line": 27,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "current 被重新赋值为 Node(...)",
+      "callStack": [
+        "display(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "current is not None? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 26,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"20\"",
+      "output": "20"
+    },
+    {
+      "line": 27,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "Node(...)",
+          "type": "Node"
+        }
+      },
+      "note": "current 被重新赋值为 Node(...)",
+      "callStack": [
+        "display(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "current is not None? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 26,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"30\"",
+      "output": "30"
+    },
+    {
+      "line": 27,
+      "action": "assign",
+      "vars": {
+        "current": {
+          "value": "None",
+          "type": "NoneType",
+          "changed": true
+        }
+      },
+      "note": "current 被重新赋值为 None，类型从 Node 变为 空值",
+      "callStack": [
+        "display(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "current is not None? 否，退出循环",
+      "branch": "false"
+    },
+    {
+      "line": 28,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"None\"",
+      "output": "None"
+    },
+    {
+      "line": 28,
+      "action": "return",
+      "vars": {},
+      "note": "display 返回 None",
+      "callStack": [
+        "display(<LinkedList object at 0x0000000001B682F0>)"
+      ]
+    }
+  ]
+}

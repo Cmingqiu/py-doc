@@ -31,8 +31,10 @@ export function getSourceFiles(): SourceFile[] {
 
       const slug = path.relative(SOURCES_DIR, fullPath).replace(/\.py$/, "").replace(/\\/g, "/");
       const code = fs.readFileSync(fullPath, "utf-8");
-      const stepsPath = fullPath.replace(/\.py$/, ".steps.json");
-      const steps = readStepsFile(stepsPath);
+      // Prefer manual .steps.json, fall back to auto-generated .steps.auto.json
+      const manualPath = fullPath.replace(/\.py$/, ".steps.json");
+      const autoPath = fullPath.replace(/\.py$/, ".steps.auto.json");
+      const steps = readStepsFile(manualPath) || readStepsFile(autoPath);
 
       if (!steps) continue;
 

@@ -1,0 +1,645 @@
+{
+  "title": "循环",
+  "description": "for 循环和 while 循环",
+  "steps": [
+    {
+      "line": 5,
+      "action": "assign",
+      "vars": {
+        "fruits": {
+          "value": "['苹果', '香蕉', '橘子']",
+          "type": "list"
+        }
+      },
+      "note": "创建列表变量 fruits",
+      "callStack": []
+    },
+    {
+      "line": 6,
+      "action": "loop_iter",
+      "vars": {
+        "fruit": {
+          "value": "'苹果'",
+          "type": "str"
+        }
+      },
+      "note": "第 1 次迭代：fruit = '苹果'",
+      "loopVar": "fruit",
+      "loopValue": "'苹果'"
+    },
+    {
+      "line": 7,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"我喜欢苹果\"",
+      "output": "我喜欢苹果"
+    },
+    {
+      "line": 6,
+      "action": "loop_iter",
+      "vars": {
+        "fruit": {
+          "value": "'香蕉'",
+          "type": "str",
+          "changed": true
+        }
+      },
+      "note": "第 2 次迭代：fruit = '香蕉'",
+      "loopVar": "fruit",
+      "loopValue": "'香蕉'"
+    },
+    {
+      "line": 7,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"我喜欢香蕉\"",
+      "output": "我喜欢香蕉"
+    },
+    {
+      "line": 6,
+      "action": "loop_iter",
+      "vars": {
+        "fruit": {
+          "value": "'橘子'",
+          "type": "str",
+          "changed": true
+        }
+      },
+      "note": "第 3 次迭代：fruit = '橘子'",
+      "loopVar": "fruit",
+      "loopValue": "'橘子'"
+    },
+    {
+      "line": 7,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"我喜欢橘子\"",
+      "output": "我喜欢橘子"
+    },
+    {
+      "line": 10,
+      "action": "assign",
+      "vars": {
+        "total": {
+          "value": "0",
+          "type": "int"
+        }
+      },
+      "note": "创建整数变量 total",
+      "callStack": []
+    },
+    {
+      "line": 11,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "1",
+          "type": "int"
+        }
+      },
+      "note": "第 1 次迭代：i = 1",
+      "loopVar": "i",
+      "loopValue": "1"
+    },
+    {
+      "line": 12,
+      "action": "assign",
+      "vars": {
+        "total": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "total 被重新赋值为 1",
+      "callStack": []
+    },
+    {
+      "line": 11,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 2 次迭代：i = 2",
+      "loopVar": "i",
+      "loopValue": "2"
+    },
+    {
+      "line": 12,
+      "action": "assign",
+      "vars": {
+        "total": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "total 被重新赋值为 3",
+      "callStack": []
+    },
+    {
+      "line": 11,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 3 次迭代：i = 3",
+      "loopVar": "i",
+      "loopValue": "3"
+    },
+    {
+      "line": 12,
+      "action": "assign",
+      "vars": {
+        "total": {
+          "value": "6",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "total 被重新赋值为 6",
+      "callStack": []
+    },
+    {
+      "line": 11,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "4",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 4 次迭代：i = 4",
+      "loopVar": "i",
+      "loopValue": "4"
+    },
+    {
+      "line": 12,
+      "action": "assign",
+      "vars": {
+        "total": {
+          "value": "10",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "total 被重新赋值为 10",
+      "callStack": []
+    },
+    {
+      "line": 11,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "5",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 5 次迭代：i = 5",
+      "loopVar": "i",
+      "loopValue": "5"
+    },
+    {
+      "line": 12,
+      "action": "assign",
+      "vars": {
+        "total": {
+          "value": "15",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "total 被重新赋值为 15",
+      "callStack": []
+    },
+    {
+      "line": 13,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"1到5的和: 15\"",
+      "output": "1到5的和: 15"
+    },
+    {
+      "line": 16,
+      "action": "assign",
+      "vars": {
+        "count": {
+          "value": "5",
+          "type": "int"
+        }
+      },
+      "note": "创建整数变量 count",
+      "callStack": []
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "count > 0? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"倒计时: 5\"",
+      "output": "倒计时: 5"
+    },
+    {
+      "line": 19,
+      "action": "assign",
+      "vars": {
+        "count": {
+          "value": "4",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "count 被重新赋值为 4",
+      "callStack": []
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "count > 0? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"倒计时: 4\"",
+      "output": "倒计时: 4"
+    },
+    {
+      "line": 19,
+      "action": "assign",
+      "vars": {
+        "count": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "count 被重新赋值为 3",
+      "callStack": []
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "count > 0? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"倒计时: 3\"",
+      "output": "倒计时: 3"
+    },
+    {
+      "line": 19,
+      "action": "assign",
+      "vars": {
+        "count": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "count 被重新赋值为 2",
+      "callStack": []
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "count > 0? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"倒计时: 2\"",
+      "output": "倒计时: 2"
+    },
+    {
+      "line": 19,
+      "action": "assign",
+      "vars": {
+        "count": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "count 被重新赋值为 1",
+      "callStack": []
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "count > 0? 是，进入循环体",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"倒计时: 1\"",
+      "output": "倒计时: 1"
+    },
+    {
+      "line": 19,
+      "action": "assign",
+      "vars": {
+        "count": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "count 被重新赋值为 0",
+      "callStack": []
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "count > 0? 否，退出循环",
+      "branch": "false"
+    },
+    {
+      "line": 22,
+      "action": "loop_iter",
+      "vars": {
+        "num": {
+          "value": "0",
+          "type": "int"
+        }
+      },
+      "note": "第 1 次迭代：num = 0",
+      "loopVar": "num",
+      "loopValue": "0"
+    },
+    {
+      "line": 23,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 3? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 7? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 27,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"0\"",
+      "output": "0"
+    },
+    {
+      "line": 22,
+      "action": "loop_iter",
+      "vars": {
+        "num": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 2 次迭代：num = 1",
+      "loopVar": "num",
+      "loopValue": "1"
+    },
+    {
+      "line": 23,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 3? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 7? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 27,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"1\"",
+      "output": "1"
+    },
+    {
+      "line": 22,
+      "action": "loop_iter",
+      "vars": {
+        "num": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 3 次迭代：num = 2",
+      "loopVar": "num",
+      "loopValue": "2"
+    },
+    {
+      "line": 23,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 3? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 7? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 27,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"2\"",
+      "output": "2"
+    },
+    {
+      "line": 22,
+      "action": "loop_iter",
+      "vars": {
+        "num": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 4 次迭代：num = 3",
+      "loopVar": "num",
+      "loopValue": "3"
+    },
+    {
+      "line": 23,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 3? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 22,
+      "action": "loop_iter",
+      "vars": {
+        "num": {
+          "value": "4",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 5 次迭代：num = 4",
+      "loopVar": "num",
+      "loopValue": "4"
+    },
+    {
+      "line": 23,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 3? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 7? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 27,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"4\"",
+      "output": "4"
+    },
+    {
+      "line": 22,
+      "action": "loop_iter",
+      "vars": {
+        "num": {
+          "value": "5",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 6 次迭代：num = 5",
+      "loopVar": "num",
+      "loopValue": "5"
+    },
+    {
+      "line": 23,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 3? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 7? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 27,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"5\"",
+      "output": "5"
+    },
+    {
+      "line": 22,
+      "action": "loop_iter",
+      "vars": {
+        "num": {
+          "value": "6",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 7 次迭代：num = 6",
+      "loopVar": "num",
+      "loopValue": "6"
+    },
+    {
+      "line": 23,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 3? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 7? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 27,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"6\"",
+      "output": "6"
+    },
+    {
+      "line": 22,
+      "action": "loop_iter",
+      "vars": {
+        "num": {
+          "value": "7",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 8 次迭代：num = 7",
+      "loopVar": "num",
+      "loopValue": "7"
+    },
+    {
+      "line": 23,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 3? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 25,
+      "action": "condition",
+      "vars": {},
+      "note": "num == 7? 是，进入分支",
+      "branch": "true"
+    }
+  ]
+}

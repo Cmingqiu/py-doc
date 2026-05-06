@@ -1,0 +1,101 @@
+{
+  "title": "条件判断",
+  "description": "if / elif / else 控制程序流程",
+  "steps": [
+    {
+      "line": 4,
+      "action": "assign",
+      "vars": {
+        "score": {
+          "value": "85",
+          "type": "int"
+        }
+      },
+      "note": "创建整数变量 score",
+      "callStack": []
+    },
+    {
+      "line": 6,
+      "action": "condition",
+      "vars": {},
+      "note": "score >= 90? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 8,
+      "action": "condition",
+      "vars": {
+        "grade": {
+          "value": "'B'",
+          "type": "str"
+        }
+      },
+      "note": "score >= 80? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 9,
+      "action": "assign",
+      "vars": {
+        "grade": {
+          "value": "'B'",
+          "type": "str"
+        }
+      },
+      "note": "grade 被重新赋值为 'B'",
+      "callStack": []
+    },
+    {
+      "line": 15,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"分数: 85, 等级: B\"",
+      "output": "分数: 85, 等级: B"
+    },
+    {
+      "line": 18,
+      "action": "assign",
+      "vars": {
+        "age": {
+          "value": "20",
+          "type": "int"
+        }
+      },
+      "note": "创建整数变量 age",
+      "callStack": []
+    },
+    {
+      "line": 19,
+      "action": "assign",
+      "vars": {
+        "has_id": {
+          "value": "True",
+          "type": "bool"
+        }
+      },
+      "note": "创建布尔变量 has_id",
+      "callStack": []
+    },
+    {
+      "line": 21,
+      "action": "condition",
+      "vars": {},
+      "note": "age >= 18? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 22,
+      "action": "condition",
+      "vars": {},
+      "note": "has_id? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 23,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"可以进入\"",
+      "output": "可以进入"
+    }
+  ]
+}

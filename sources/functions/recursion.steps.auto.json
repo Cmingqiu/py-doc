@@ -1,0 +1,1939 @@
+{
+  "title": "递归",
+  "description": "函数调用自身来解决问题",
+  "steps": [
+    {
+      "line": 10,
+      "action": "assign",
+      "vars": {
+        "result": {
+          "value": "120",
+          "type": "int"
+        }
+      },
+      "note": "创建整数变量 result",
+      "callStack": []
+    },
+    {
+      "line": 4,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "5",
+          "type": "int"
+        }
+      },
+      "note": "调用 factorial(5)",
+      "callStack": [
+        "factorial(5)"
+      ]
+    },
+    {
+      "line": 6,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 4,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "4",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 factorial，递归调用",
+      "callStack": [
+        "factorial(5)",
+        "factorial(4)"
+      ]
+    },
+    {
+      "line": 6,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 4,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 factorial，递归调用",
+      "callStack": [
+        "factorial(5)",
+        "factorial(4)",
+        "factorial(3)"
+      ]
+    },
+    {
+      "line": 6,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 4,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 factorial，递归调用",
+      "callStack": [
+        "factorial(5)",
+        "factorial(4)",
+        "factorial(3)",
+        "factorial(2)"
+      ]
+    },
+    {
+      "line": 6,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 4,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 factorial，递归调用",
+      "callStack": [
+        "factorial(5)",
+        "factorial(4)",
+        "factorial(3)",
+        "factorial(2)",
+        "factorial(1)"
+      ]
+    },
+    {
+      "line": 6,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 7,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "factorial(5)",
+        "factorial(4)",
+        "factorial(3)",
+        "factorial(2)",
+        "factorial(1)"
+      ]
+    },
+    {
+      "line": 8,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 2",
+      "callStack": [
+        "factorial(5)",
+        "factorial(4)",
+        "factorial(3)",
+        "factorial(2)"
+      ]
+    },
+    {
+      "line": 8,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "6",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 6",
+      "callStack": [
+        "factorial(5)",
+        "factorial(4)",
+        "factorial(3)"
+      ]
+    },
+    {
+      "line": 8,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "24",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 24",
+      "callStack": [
+        "factorial(5)",
+        "factorial(4)"
+      ]
+    },
+    {
+      "line": 8,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "120",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "factorial 返回 120",
+      "callStack": [
+        "factorial(5)"
+      ]
+    },
+    {
+      "line": 11,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"5! = 120\"",
+      "output": "5! = 120"
+    },
+    {
+      "line": 21,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "0",
+          "type": "int"
+        }
+      },
+      "note": "第 1 次迭代：i = 0",
+      "loopVar": "i",
+      "loopValue": "0"
+    },
+    {
+      "line": 22,
+      "action": "output",
+      "vars": {},
+      "note": "打印结果",
+      "output": ""
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "调用 fib(0)",
+      "callStack": [
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "fib 返回 0",
+      "callStack": [
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 21,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        },
+        "result": {
+          "value": "120",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 2 次迭代：i = 1",
+      "loopVar": "i",
+      "loopValue": "1"
+    },
+    {
+      "line": 22,
+      "action": "output",
+      "vars": {},
+      "note": "打印结果",
+      "output": ""
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "调用 fib(1)",
+      "callStack": [
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "fib 返回 1",
+      "callStack": [
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 21,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        },
+        "result": {
+          "value": "120",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 3 次迭代：i = 2",
+      "loopVar": "i",
+      "loopValue": "2"
+    },
+    {
+      "line": 22,
+      "action": "output",
+      "vars": {},
+      "note": "打印结果",
+      "output": ""
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "调用 fib(2)",
+      "callStack": [
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 0",
+      "callStack": [
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "fib 返回 1",
+      "callStack": [
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 21,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        },
+        "result": {
+          "value": "120",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 4 次迭代：i = 3",
+      "loopVar": "i",
+      "loopValue": "3"
+    },
+    {
+      "line": 22,
+      "action": "output",
+      "vars": {},
+      "note": "打印结果",
+      "output": ""
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "调用 fib(3)",
+      "callStack": [
+        "fib(3)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(3)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(3)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(3)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(3)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 0",
+      "callStack": [
+        "fib(3)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(3)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(3)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(3)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "fib 返回 2",
+      "callStack": [
+        "fib(3)"
+      ]
+    },
+    {
+      "line": 21,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "4",
+          "type": "int",
+          "changed": true
+        },
+        "result": {
+          "value": "120",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 5 次迭代：i = 4",
+      "loopVar": "i",
+      "loopValue": "4"
+    },
+    {
+      "line": 22,
+      "action": "output",
+      "vars": {},
+      "note": "打印结果",
+      "output": ""
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "4",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "调用 fib(4)",
+      "callStack": [
+        "fib(4)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(4)",
+        "fib(3)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(4)",
+        "fib(3)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(4)",
+        "fib(3)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(4)",
+        "fib(3)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(4)",
+        "fib(3)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 0",
+      "callStack": [
+        "fib(4)",
+        "fib(3)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(4)",
+        "fib(3)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(4)",
+        "fib(3)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(4)",
+        "fib(3)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 2",
+      "callStack": [
+        "fib(4)",
+        "fib(3)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(4)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(4)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(4)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(4)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 0",
+      "callStack": [
+        "fib(4)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(4)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "fib 返回 3",
+      "callStack": [
+        "fib(4)"
+      ]
+    },
+    {
+      "line": 21,
+      "action": "loop_iter",
+      "vars": {
+        "i": {
+          "value": "5",
+          "type": "int",
+          "changed": true
+        },
+        "result": {
+          "value": "120",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "第 6 次迭代：i = 5",
+      "loopVar": "i",
+      "loopValue": "5"
+    },
+    {
+      "line": 22,
+      "action": "output",
+      "vars": {},
+      "note": "打印结果",
+      "output": ""
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "5",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "调用 fib(5)",
+      "callStack": [
+        "fib(5)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "4",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 0",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 2",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(3)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 0",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(5)",
+        "fib(4)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 3",
+      "callStack": [
+        "fib(5)",
+        "fib(4)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "3",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(3)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(3)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(3)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(5)",
+        "fib(3)",
+        "fib(2)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(3)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 16,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "0",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 0",
+      "callStack": [
+        "fib(5)",
+        "fib(3)",
+        "fib(2)",
+        "fib(0)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(5)",
+        "fib(3)",
+        "fib(2)"
+      ]
+    },
+    {
+      "line": 14,
+      "action": "call",
+      "vars": {
+        "n": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "需要 fib，递归调用",
+      "callStack": [
+        "fib(5)",
+        "fib(3)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 15,
+      "action": "condition",
+      "vars": {},
+      "note": "n <= 0? 否，跳过分支",
+      "branch": "false"
+    },
+    {
+      "line": 17,
+      "action": "condition",
+      "vars": {},
+      "note": "n == 1? 是，进入分支",
+      "branch": "true"
+    },
+    {
+      "line": 18,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 1",
+      "callStack": [
+        "fib(5)",
+        "fib(3)",
+        "fib(1)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "到达基准情况，返回 2",
+      "callStack": [
+        "fib(5)",
+        "fib(3)"
+      ]
+    },
+    {
+      "line": 19,
+      "action": "return",
+      "vars": {
+        "result": {
+          "value": "5",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "fib 返回 5",
+      "callStack": [
+        "fib(5)"
+      ]
+    }
+  ]
+}

@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "oxlint",
     "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "fmt:check": "oxfmt --check",
+    "generate-steps": "cd tools && python -m step_generator ../sources/",
+    "generate-steps:force": "cd tools && python -m step_generator ../sources/ --force",
+    "generate-steps:dry": "cd tools && python -m step_generator ../sources/ --dry-run"
   },
   "dependencies": {
     "framer-motion": "^11",

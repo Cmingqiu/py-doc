@@ -1,0 +1,124 @@
+{
+  "title": "变量与赋值",
+  "description": "Python 中变量不需要声明类型，直接赋值即可",
+  "steps": [
+    {
+      "line": 4,
+      "action": "assign",
+      "vars": {
+        "name": {
+          "value": "'Alice'",
+          "type": "str"
+        }
+      },
+      "note": "创建字符串变量 name",
+      "callStack": []
+    },
+    {
+      "line": 5,
+      "action": "assign",
+      "vars": {
+        "age": {
+          "value": "25",
+          "type": "int"
+        }
+      },
+      "note": "创建整数变量 age",
+      "callStack": []
+    },
+    {
+      "line": 6,
+      "action": "assign",
+      "vars": {
+        "height": {
+          "value": "1.68",
+          "type": "float"
+        }
+      },
+      "note": "创建浮点数变量 height",
+      "callStack": []
+    },
+    {
+      "line": 7,
+      "action": "assign",
+      "vars": {
+        "is_student": {
+          "value": "True",
+          "type": "bool"
+        }
+      },
+      "note": "创建布尔变量 is_student",
+      "callStack": []
+    },
+    {
+      "line": 10,
+      "action": "assign",
+      "vars": {
+        "age": {
+          "value": "26",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "age 被重新赋值为 26",
+      "callStack": []
+    },
+    {
+      "line": 11,
+      "action": "assign",
+      "vars": {
+        "age": {
+          "value": "'twenty-six'",
+          "type": "str",
+          "changed": true
+        }
+      },
+      "note": "age 被重新赋值为 'twenty-six'，类型从 整数 变为 字符串",
+      "callStack": []
+    },
+    {
+      "line": 14,
+      "action": "assign",
+      "vars": {
+        "x": {
+          "value": "1",
+          "type": "int"
+        },
+        "y": {
+          "value": "2",
+          "type": "int"
+        },
+        "z": {
+          "value": "3",
+          "type": "int"
+        }
+      },
+      "note": "多重赋值，一行创建 3 个变量",
+      "callStack": []
+    },
+    {
+      "line": 17,
+      "action": "swap",
+      "vars": {
+        "x": {
+          "value": "2",
+          "type": "int",
+          "changed": true
+        },
+        "y": {
+          "value": "1",
+          "type": "int",
+          "changed": true
+        }
+      },
+      "note": "交换变量 x 和 y，值互换"
+    },
+    {
+      "line": 19,
+      "action": "output",
+      "vars": {},
+      "note": "打印\"Alice twenty-six 1.68\"",
+      "output": "Alice twenty-six 1.68"
+    }
+  ]
+}
