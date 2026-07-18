@@ -1,18 +1,100 @@
 @import "tailwindcss";
 
-:root {
-  --bg-primary: #050816;
-  --bg-secondary: #0a0f2c;
-  --bg-card: #0d1333;
-  --accent-blue: #3b82f6;
-  --accent-purple: #8b5cf6;
-  --accent-cyan: #06b6d4;
-  --accent-pink: #ec4899;
-  --accent-green: #10b981;
-  --text-primary: #e2e8f0;
-  --text-secondary: #94a3b8;
-  --glow-blue: rgba(59, 130, 246, 0.3);
-  --glow-purple: rgba(139, 92, 246, 0.3);
+/* Forest theme - default eye-friendly green */
+:root,
+[data-theme="forest"] {
+  --bg-primary: #0a1410;
+  --bg-secondary: #142820;
+  --bg-card: #1a3228;
+  --bg-elevated: #224030;
+
+  --accent-primary: #7cb342;
+  --accent-secondary: #aed581;
+  --accent-highlight: #cddc39;
+  --accent-warm: #ffb74d;
+
+  --text-primary: #e8f5e9;
+  --text-secondary: #a5d6a7;
+  --text-muted: #66bb6a;
+
+  --glow-primary: rgba(124, 179, 66, 0.25);
+  --glow-focus: rgba(205, 220, 57, 0.35);
+
+  --code-bg: #162820;
+  --code-highlight: rgba(124, 179, 66, 0.12);
+  --code-border: rgba(124, 179, 66, 0.25);
+}
+
+/* Ocean theme - deep blue tones */
+[data-theme="ocean"] {
+  --bg-primary: #0a1420;
+  --bg-secondary: #0f1f35;
+  --bg-card: #152a45;
+  --bg-elevated: #1a3555;
+
+  --accent-primary: #4fc3f7;
+  --accent-secondary: #81d4fa;
+  --accent-highlight: #29b6f6;
+  --accent-warm: #ffa726;
+
+  --text-primary: #e1f5fe;
+  --text-secondary: #81d4fa;
+  --text-muted: #4fc3f7;
+
+  --glow-primary: rgba(79, 195, 247, 0.25);
+  --glow-focus: rgba(41, 182, 246, 0.35);
+
+  --code-bg: #0d1928;
+  --code-highlight: rgba(79, 195, 247, 0.12);
+  --code-border: rgba(79, 195, 247, 0.25);
+}
+
+/* Sunset theme - warm amber tones */
+[data-theme="sunset"] {
+  --bg-primary: #1a1410;
+  --bg-secondary: #251f18;
+  --bg-card: #2f2820;
+  --bg-elevated: #3a3228;
+
+  --accent-primary: #ff8a65;
+  --accent-secondary: #ffab91;
+  --accent-highlight: #ffa726;
+  --accent-warm: #ffcc80;
+
+  --text-primary: #fff3e0;
+  --text-secondary: #ffcc80;
+  --text-muted: #ffab91;
+
+  --glow-primary: rgba(255, 138, 101, 0.25);
+  --glow-focus: rgba(255, 167, 38, 0.35);
+
+  --code-bg: #1f1812;
+  --code-highlight: rgba(255, 138, 101, 0.12);
+  --code-border: rgba(255, 138, 101, 0.25);
+}
+
+/* High contrast theme - accessibility */
+[data-theme="contrast"] {
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-card: #141414;
+  --bg-elevated: #1e1e1e;
+
+  --accent-primary: #00ff00;
+  --accent-secondary: #00ffff;
+  --accent-highlight: #ffff00;
+  --accent-warm: #ff8800;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+
+  --glow-primary: rgba(0, 255, 0, 0.4);
+  --glow-focus: rgba(255, 255, 0, 0.5);
+
+  --code-bg: #000000;
+  --code-highlight: rgba(0, 255, 0, 0.15);
+  --code-border: rgba(0, 255, 0, 0.5);
 }
 
 @theme inline {
@@ -27,59 +109,64 @@ body {
   color: var(--text-primary);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 全局渐变背景 */
+/* Ambient background glow - adapts to theme */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(59, 130, 246, 0.12), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(139, 92, 246, 0.08), transparent),
-    radial-gradient(ellipse 50% 30% at 10% 80%, rgba(6, 182, 212, 0.06), transparent);
+    radial-gradient(ellipse 80% 60% at 50% -20%, var(--glow-primary), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 60%, var(--glow-focus), transparent),
+    radial-gradient(ellipse 50% 30% at 10% 80%, var(--glow-primary), transparent);
   pointer-events: none;
   z-index: 0;
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
 }
 
-/* 渐变文字 */
+/* Gradient text - adapts to theme accent colors */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-highlight));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: background 0.3s ease;
 }
 
-/* 发光边框卡片 */
+/* Glowing card - breathing hover effect */
 .glow-card {
-  background: linear-gradient(135deg, rgba(13, 19, 51, 0.9), rgba(15, 23, 60, 0.8));
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  background: var(--bg-card);
+  border: 1px solid var(--code-border);
   border-radius: 0.75rem;
   transition: all 0.3s ease;
 }
 
 .glow-card:hover {
-  border-color: rgba(139, 92, 246, 0.4);
+  background: var(--bg-elevated);
+  border-color: var(--accent-primary);
   box-shadow:
-    0 0 20px rgba(59, 130, 246, 0.1),
-    0 0 40px rgba(139, 92, 246, 0.05);
+    0 0 20px var(--glow-primary),
+    0 0 40px var(--glow-focus);
   transform: translateY(-2px);
 }
 
-/* 渐变按钮 */
+/* Gradient button - theme-aware */
 .gradient-btn {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  color: white;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: var(--bg-primary);
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1.25rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 0 15px var(--glow-primary);
 }
 
 .gradient-btn:hover {
-  box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 25px var(--glow-focus);
   transform: translateY(-1px);
 }
 
@@ -89,13 +176,13 @@ body::before {
   transform: none;
 }
 
-/* 滑块样式 */
+/* Range slider - theme-aware gradient */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
   outline: none;
 }
 
@@ -105,12 +192,17 @@ input[type="range"]::-webkit-slider-thumb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  background: var(--text-primary);
+  box-shadow: 0 0 8px var(--glow-primary);
   cursor: pointer;
+  transition: box-shadow 0.2s ease;
 }
 
-/* 滚动条 */
+input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 12px var(--glow-focus);
+}
+
+/* Scrollbar - theme-aware */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -121,20 +213,29 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(59, 130, 246, 0.3);
+  background: var(--accent-primary);
+  opacity: 0.3;
   border-radius: 3px;
+  transition: background 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.5);
+  background: var(--accent-secondary);
+  opacity: 0.5;
 }
 
-/* 分类标签 */
+/* Category badge - theme-aware */
 .category-badge {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15));
-  border: 1px solid rgba(6, 182, 212, 0.3);
+  background: linear-gradient(135deg, var(--code-highlight), var(--bg-elevated));
+  border: 1px solid var(--code-border);
   border-radius: 9999px;
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
-  color: #06b6d4;
+  color: var(--accent-secondary);
+  transition: all 0.2s ease;
+}
+
+.category-badge:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-elevated);
 }

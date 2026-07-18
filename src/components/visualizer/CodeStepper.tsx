@@ -24,7 +24,9 @@ export default function CodeStepper({ code, steps, currentStep }: CodeStepperPro
   }, [highlightLine]);
 
   return (
-    <div ref={containerRef} className="h-full overflow-auto rounded-lg bg-zinc-900 text-sm">
+    <div ref={containerRef} className="h-full overflow-auto rounded-lg text-sm" style={{
+      background: 'var(--code-bg)'
+    }}>
       <table className="w-full border-collapse font-mono">
         <tbody>
           {lines.map((line, i) => {
@@ -36,10 +38,13 @@ export default function CodeStepper({ code, steps, currentStep }: CodeStepperPro
                 key={`${id}-${lineNum}`}
                 data-line={lineNum}
                 className={`relative transition-colors duration-200 ${
-                  isActive ? "bg-blue-500/20" : "hover:bg-white/5"
+                  isActive ? "" : "hover:bg-white/5"
                 }`}
+                style={isActive ? { background: 'var(--code-highlight)' } : undefined}
               >
-                <td className="select-none px-3 py-0.5 text-right text-zinc-600 w-[1%] whitespace-nowrap">
+                <td className="select-none px-3 py-0.5 text-right w-[1%] whitespace-nowrap" style={{
+                  color: 'var(--text-muted)'
+                }}>
                   {String(lineNum).padStart(lineNumWidth)}
                 </td>
                 <td className="px-4 py-0.5 whitespace-pre">
@@ -47,12 +52,16 @@ export default function CodeStepper({ code, steps, currentStep }: CodeStepperPro
                     {isActive && (
                       <motion.div
                         layoutId="highlight"
-                        className="absolute inset-0 rounded-sm border-l-2 border-blue-400 bg-blue-500/10"
+                        className="absolute inset-0 rounded-sm border-l-2"
+                        style={{
+                          borderColor: 'var(--accent-primary)',
+                          background: 'var(--code-highlight)'
+                        }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
                     )}
                   </AnimatePresence>
-                  <span className="relative z-10 text-zinc-100">{line || " "}</span>
+                  <span className="relative z-10" style={{ color: 'var(--text-primary)' }}>{line || " "}</span>
                 </td>
               </tr>
             );

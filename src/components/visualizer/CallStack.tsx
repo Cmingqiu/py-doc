@@ -23,12 +23,12 @@ export default function CallStack({ steps, currentStep }: CallStackProps) {
   const stack = currentStep >= 0 ? getCallStack(steps, currentStep) : [];
 
   return (
-    <div className="rounded-lg bg-zinc-900 p-4 h-full overflow-auto">
-      <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-3">
+    <div className="rounded-lg p-4 h-full overflow-auto" style={{ background: 'var(--bg-card)' }}>
+      <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>
         调用栈
       </h3>
       {stack.length === 0 ? (
-        <p className="text-zinc-600 text-sm italic">栈为空</p>
+        <p className="text-sm italic" style={{ color: 'var(--text-muted)', opacity: 0.6 }}>栈为空</p>
       ) : (
         <div className="space-y-1">
           <AnimatePresence mode="popLayout">
@@ -41,10 +41,16 @@ export default function CallStack({ steps, currentStep }: CallStackProps) {
                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
                 className={`font-mono text-sm px-3 py-1.5 rounded ${
-                  i === stack.length - 1
-                    ? "bg-purple-500/20 text-purple-300 ring-1 ring-purple-500/30"
-                    : "bg-zinc-800 text-zinc-400"
+                  i === stack.length - 1 ? "ring-1" : ""
                 }`}
+                style={i === stack.length - 1 ? {
+                  background: 'var(--code-highlight)',
+                  color: 'var(--accent-secondary)',
+                  borderColor: 'var(--accent-primary)'
+                } : {
+                  background: 'var(--bg-elevated)',
+                  color: 'var(--text-secondary)'
+                }}
               >
                 {frame}
               </motion.div>

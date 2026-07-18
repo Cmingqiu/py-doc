@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ThemeInitializer from "@/components/theme/ThemeInitializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +27,29 @@ export default function RootLayout({
     <html
       lang="zh-CN"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      data-theme="forest"
     >
-      <body className="min-h-full flex flex-col relative">{children}</body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const stored = localStorage.getItem('pydoc-theme');
+                  const theme = stored ? JSON.parse(stored).state.currentTheme : 'forest';
+                  document.documentElement.setAttribute('data-theme', theme);
+                } catch (e) {
+                  document.documentElement.setAttribute('data-theme', 'forest');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col relative">
+        <ThemeInitializer />
+        {children}
+      </body>
     </html>
   );
 }
